@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Fashion Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white-500 text-gray-900 ">
+    <!-- Navbar -->
+    <nav class="bg-white shadow p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div>
+                <img src="./img/logo-black.png" alt="Shop Logo" class="w-200 h-16">
+            </div>
+            <ul class="hidden md:flex gap-8 uppercase tracking-wider">
+                <li><a href="#" class="hover:text-gray-600 hover:font-bold">Catalogue</a></li>
+                <li><a href="#" class="hover:text-gray-600 hover:font-bold">Fashion</a></li>
+                <li><a href="#" class="hover:text-gray-600 hover:font-bold">Favourite</a></li>
+                <li><a href="#" class="hover:text-gray-600 hover:font-bold">Lifestyle</a></li>
+                <li><a href="signup.html" class="bg-black text-white py-2 px-4 rounded-md hover:bg-gray-800" hover:font-bold>Sign
+                        up</a></li>
+
+            </ul>
+            <div class="relative">
+                <button class="relative">
+                    <img src="./img/cart.png" alt="Cart" class="w-8 h-8">
+                    <span id="cart-count"
+                        class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                    <!-- Cart Modal -->
+                    <div id="cart-display"
+                        class="hidden bg-gray-200 p-4 mt-4 absolute right-0 top-12 w-96 rounded-lg shadow-lg">
+                        <h2 class="text-xl font-bold">Your Cart</h2>
+                        <ul id="cart-items" class="mt-2"></ul>
+                        <p id="cart-total" class="mt-4 font-bold">Total: $0.00</p>
+                    </div>
+
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+        class="flex flex-col container mx-auto bg-[#F4F6F5] rounded-[59px] pt-16 px-10 md:items-center md:px-20 md:pt-[68px] md:flex-row md:justify-between gap-10 z-30 mt-10">
+        <div class="flex flex-col items-start text-black md:pb-[68px] z-10">
+            <h1 class="text-4xl font-black  leading-[125%]   sm:text-5xl md:text-[96px] md:leading-[125%] "><span
+                    class="relative after:w-[120%] after:h-full after:bg-white after:block after:absolute after:-z-10 after:top-0 after:-rotate-2">LET’S</span>
+                <br /> EXPLORE <br />
+                <span
+                    class="relative after:w-[120%] after:h-full after:bg-primary after:block after:absolute after:-z-10 after:top-0 after:-rotate-2">UNIQUE</span>
+                <br /> CLOTHES.
+            </h1>
+            <p class="md:text-[32px]">Live for Influential and Innovative fashion!</p>
+            <div class="flex flex-col md:flex-row md:items-center justify-evenly gap-9 pt-8">
+                <div class="w-1/2 h-1/2">
+                    <img class="" src="./img/banner-image-2.png" alt="banner image" srcset="">
+                </div>
+                <a class="bg-black text-white rounded-md py-4 px-4 text-center hover:font-bold" href="#">Shop Now</a>
+            </div>
+        </div>
+        <div class="">
+            <img class="w-full" src="./img/banner-image.png" alt="banner image" />
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section
+        class="flex flex-col justify-center items-center gap-[121px] my-16 bg-yello py-[61px] md:flex-row bg-yellow-400">
+        <div class="w-[118px]"><img src="img/hm.png" alt="" srcset=""></div>
+        <div class="w-[150px]"><img src="img/obey.png" alt="" srcset=""></div>
+        <div class="w-[176px]"><img src="img/shopify.png" alt="" srcset=""></div>
+        <div class="w-[150px]"><img src="img/lacoste.png" alt="" srcset=""></div>
+        <div class="w-[127px]"><img class="" src="img/levis.png" alt="" srcset=""></div>
+        <div class="w-[166px]"><img src="img/amazon.png" alt="" srcset=""></div>
+    </section>
+
+    <!-- New Arrivals Section -->
+    <section class="container mx-auto mt-16 px-4 bg-yellow-200">
+        <h2 class="text-2xl md:text-4xl font-bold text-center pt-5 hover:underline">NEW ARRIVALS</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+            <!-- Product Card -->
+            <div class="bg-white rounded-lg shadow p-4">
+                <img src="./img/hoddiee.png" alt="Hoodie" class="w-full h-64 object-cover rounded-lg">
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold">Hoodies & Sweatshirt</h3>
+                    <p class="text-gray-600">$29.99</p>
+                    <button class="mt-4 w-full bg-black text-white py-2 rounded-md hover:bg-gray-800 add-to-cart-btn"
+                        data-product="Hoodies & Sweatshirt" data-price="29.99">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+            <!-- Product Card -->
+            <div class="bg-white rounded-lg shadow p-4">
+                <img src="./img/coats.png" alt="Coats" class="w-full h-64 object-cover rounded-lg">
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold">Coats & Parkas</h3>
+                    <p class="text-gray-600">$49.99</p>
+                    <button class="mt-4 w-full bg-black text-white py-2 rounded-md hover:bg-gray-800 add-to-cart-btn"
+                        data-product="Coats & Parkas" data-price="49.99">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+            <!-- Product Card -->
+            <div class="bg-white rounded-lg shadow p-4">
+                <img src="./img/T-shirts.png" alt="T-Shirts" class="w-full h-64 object-cover rounded-lg">
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold">Tees & T-Shirts</h3>
+                    <p class="text-gray-600">$19.99</p>
+                    <button class="mt-4 w-full bg-black text-white py-2 rounded-md hover:bg-gray-800 add-to-cart-btn"
+                        data-product="Tees & T-Shirts" data-price="19.99">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4">
+                <img src="./img/Deola-Sagoe-1024x647.jpg" alt="Hoodie" class="w-full h-64 object-cover rounded-lg">
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold">Gown and Netcap</h3>
+                    <p class="text-gray-600">$29.99</p>
+                    <button class="mt-4 w-full bg-black text-white py-2 rounded-md hover:bg-gray-800 add-to-cart-btn"
+                        data-product="Gown and Netcap" data-price="29.99">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4">
+                <img src="./img/images.jpeg" alt="Hoodie" class="w-full h-64 object-cover rounded-lg">
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold">Blazer Suit</h3>
+                    <p class="text-gray-600">$14.99</p>
+                    <button class="mt-4 w-full bg-black text-white py-2 rounded-md hover:bg-gray-800 add-to-cart-btn"
+                        data-product="Blazer Suit" data-price="14.99">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4">
+                <img src="./img/1_7f2BwS1Kd6y_NKE-Ry2zLw.jpg" alt="Hoodie" class="w-full h-64 object-cover rounded-lg">
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold">Crop-top & Jean</h3>
+                    <p class="text-gray-600">$39.99</p>
+                    <button class="mt-4 w-full bg-black text-white py-2 rounded-md hover:bg-gray-800 add-to-cart-btn"
+                        data-product="crop-top & jean" data-price="39.99">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4">
+                <img src="./img/rBEe_GKnCKiAEx05AALMClyIDnc167.jpg" alt="Hoodie"
+                    class="w-full h-64 object-cover rounded-lg">
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold">Ankara</h3>
+                    <p class="text-gray-600">$9.99</p>
+                    <button class="mt-4 w-full bg-black text-white py-2 rounded-md hover:bg-gray-800 add-to-cart-btn"
+                        data-product="Ankara" data-price="9.99">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4">
+                <img src="./img/71pzkiLYEDL._AC_SL1500_.jpg" alt="Hoodie" class="w-full h-64 object-cover rounded-lg">
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold">Tank Dress Spring Summer V Neck Ruffle</h3>
+                    <p class="text-gray-600">$59.99</p>
+                    <button class="mt-4 w-full bg-black text-white py-2 rounded-md hover:bg-gray-800 add-to-cart-btn"
+                        data-product="Tank Dress Spring Summer V Neck Ruffle" data-price="59.99">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4">
+                <img src="./img/images (1).jpeg" alt="Hoodie" class="w-full h-64 object-cover rounded-lg">
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold">Leather-Jacket & Crazy-Jean</h3>
+                    <p class="text-gray-600">$69.99</p>
+                    <button class="mt-4 w-full bg-black text-white py-2 rounded-md hover:bg-gray-800 add-to-cart-btn"
+                        data-product="Leather-Jacket & Crazy-Jean" data-price="69.99">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- App Download Section -->
+    <section class="flex flex-col container items-start my-[190px] gap-28 mx-auto">
+        <div class="relative text-black">
+            <h2
+                class="text-4xl font-black after:content-oval after:absolute after:left-[50%] after:-bottom-2.5 after:-z-10 md:text-5xl underline hover:font-bold">
+                Young’s Favourite</h2>
+        </div>
+        <div class="grid grid-flow-row grid-row-1 gap-12 md:grid-flow-col md:grid-cols-2 ">
+            <!-- cards -->
+            <div class="flex flex-col gap-7">
+                <div class="">
+                    <img class="w-full h-[704px] object-cover object-[25%] rounded-[20px] font-bold  "
+                        src="./img/fav-1.png" />
+                </div>
+                <div class="flex flex-row justify-between items-center">
+                    <div class="flex flex-col">
+                        <h3 class="text-[32px] font-medium hover:font-bold">Trending on instagram</h3>
+                        <a class="text-2xl text-[#7F7F7F] hover:font-bold" href="#">Explore Now!</a>
+                    </div>
+                    <div>
+                        <img class="" src="./img/arrow.png" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+            <!-- cards -->
+            <div class="flex flex-col gap-7">
+                <div class="h-[704px]">
+                    <img class="w-full h-[704px] object-cover object-[34%] rounded-[20px]  " src="./img/fav-2.png" />
+                </div>
+                <div class="flex flex-row justify-between items-center">
+                    <div class="flex flex-col">
+                        <h3 class="text-[32px] font-medium hover:font-bold">All Under $40</h3>
+                        <a class="text-2xl text-[#7F7F7F] hover:font-bold" href="#">Explore Now!</a>
+                    </div>
+                    <div>
+                        <img src="./img/arrow.png" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-8 my-16 px-4">
+        <div class="md:w-1/2 text-center md:text-left">
+            <h4 class="text-3xl font-extrabold">DOWNLOAD APP & GET THE VOUCHER!</h4>
+            <p class="mt-4 text-lg text-gray-600">Get 30% off for first transaction using Rondovision mobile app now.
+            </p>
+            <div class="flex justify-center md:justify-start gap-4 mt-6">
+                <img src="./img/apple-store.png" alt="Apple Store" class="w-32">
+                <img src="./img/play-store.png" alt="Play Store" class="w-32">
+            </div>
+        </div>
+        <div class="md:w-1/2">
+            <img src="./img/mobile-app.png" alt="Mobile App">
+        </div>
+    </section>
+    <div class="bg-yellow-500">
+        <section class="flex flex-col items-center py-36 bg-primary">
+            <h4
+                class="text-3xl font-black text-white text-center tracking-[1.7px] mb-8 md:leading-[70px] md:text-[55px]  ">
+                JOIN SHOPPING COMMUNITY TO <br /> GET MONTHLY PROMO</h4>
+            <p class="text-xl text-center text-white font-normal md:leading-9 tracking-[1px] md:text-[32px]">Type your
+                email
+                down below and be young wild generation</p>
+            <form class="mt-12">
+                <div class="bg-white rounded-[10px] flex flex-row items-center">
+                    <input class="px-4 py-5 rounded-[10px] focus-visible:outline-0 md:py-6 md:px-7 " type="email"
+                        name="email" placeholder="type your email here">
+                    <button
+                        class="py-2 px-4 bg-black text-white uppercase md:text-[33px] md:py-[5px] md:px-[20px] rounded-lg mr-2"
+                        type="submit">send</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="bg-black py-16 text-white px-6 md:px-20">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between">
+            <div class="mb-10 md:mb-0">
+                <img src="./img/FASHION.png" alt="Logo">
+                <p class="mt-4 text-gray-400">Complete your style with awesome clothes from us.</p>
+                <ul class="flex mt-4 gap-4">
+                    <li><a href="#"><img src="./img/fb.svg" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="./img/insta.svg" alt="Instagram"></a></li>
+                    <li><a href="#"><img src="./img/twitter.svg" alt="Twitter"></a></li>
+                    <li><a href="#"><img src="./img/linkedin.png" alt="LinkedIn"></a></li>
+                </ul>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div>
+                    <h4 class="font-bold">Company</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold">Quick Link</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#">Share Location</a></li>
+                        <li><a href="#">Orders Tracking</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold">Legal</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-8">
+            <p>&copy; <span id="current-year"></span> FASHION. All rights reserved.</p>
+            <button id="back-to-top" class="mt-4 bg-white text-black px-4 py-2 rounded">Back to Top</button>
+        </div>
+    </footer>
+    <!-- JavaScript -->
+     <!-- Add signup/login toggle functionality -->
+     <script>
+        function showLogin() {
+            document.getElementById('signup-form').classList.add('hidden');
+            document.getElementById('login-form').classList.remove('hidden');
+        }
+
+        function showSignup() {
+            document.getElementById('login-form').classList.add('hidden');
+            document.getElementById('signup-form').classList.remove('hidden');
+        }
+    </script>
+    <script>
+        // Update footer year dynamically
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Back to Top button functionality
+        document.getElementById('back-to-top').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+    <script>
+        // Select elements
+        const cartLogo = document.querySelector('.relative > button'); // Correct selector for the cart button
+        const cartDisplay = document.getElementById('cart-display');
+        const cartCountElement = document.getElementById('cart-count');
+        const cartItemsElement = document.getElementById('cart-items');
+        const cartTotalElement = document.getElementById('cart-total');
+        const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Initialize cart UI on page load
+        updateCartCount();
+        renderCartItems();
+
+        // Toggle cart display visibility
+        cartLogo.addEventListener('click', () => {
+            cartDisplay.classList.toggle('hidden');
+            if (!cartDisplay.classList.contains('hidden')) {
+                renderCartItems(); // Refresh items in the cart when opened
+            }
+        });
+
+        // Add event listeners to "Add to Cart" buttons
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const product = button.getAttribute('data-product');
+                const price = parseFloat(button.getAttribute('data-price'));
+                addToCart(product, price);
+            });
+        });
+
+        // Add item to cart
+        function addToCart(product, price) {
+            const existingItem = cart.find(item => item.product === product);
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                cart.push({ product, price, quantity: 1 });
+            }
+            saveCart();
+            updateCartCount();
+            renderCartItems();
+            showNotification(`${product} added to cart!`);
+        }
+
+        // Save cart to localStorage
+        function saveCart() {
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        // Update cart item count
+        function updateCartCount() {
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            cartCountElement.textContent = totalItems;
+        }
+
+        // Render cart items
+        function renderCartItems() {
+            cartItemsElement.innerHTML = ''; // Clear current cart items
+            let totalPrice = 0;
+
+            cart.forEach((item, index) => {
+                totalPrice += item.price * item.quantity;
+
+                const cartItem = document.createElement('li');
+                cartItem.classList.add('flex', 'justify-between', 'items-center', 'p-2', 'bg-white', 'rounded-md', 'shadow');
+
+                cartItem.innerHTML = `
+            <span>${item.product} x${item.quantity}</span>
+            <span>$${(item.price * item.quantity).toFixed(2)}</span>
+            <button class="text-red-500 font-bold" onclick="removeFromCart(${index})">Remove</button>
+        `;
+                cartItemsElement.appendChild(cartItem);
+            });
+
+            if (cart.length === 0) {
+                cartItemsElement.innerHTML = '<li class="text-gray-600">Your cart is empty.</li>';
+            }
+
+            cartTotalElement.textContent = `Total: $${totalPrice.toFixed(2)}`;
+        }
+
+        // Remove item from cart
+        function removeFromCart(index) {
+            cart.splice(index, 1); // Remove item at index
+            saveCart();
+            updateCartCount();
+            renderCartItems();
+        }
+
+        // Show notification when adding an item to the cart
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.textContent = message;
+            notification.className = 'fixed bottom-5 right-5 bg-green-500 text-white px-4 py-2 rounded shadow';
+            document.body.appendChild(notification);
+            setTimeout(() => notification.remove(), 3000);
+        }
+
+    </script>
+
+</body>
+
+</html>
